@@ -1,15 +1,15 @@
 var HTTPS = require('https');
-var cool = require('cool-ascii-faces');
+var morty = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/morty$/; botRegexNU = /^\/Welcome!/;
+      botRegexMY = /^\/morty$/; botRegexNU = /^\/Welcome!/;
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegexMY.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(Ughh!);
     this.res.end();
   } 
   else if(request.text && botRegexNU.test(request.text)) {
