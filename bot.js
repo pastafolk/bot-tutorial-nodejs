@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var cool = require('text');
+var cool = require('postMessage');
 
 var botID = process.env.BOT_ID;
 
@@ -26,7 +26,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = Ugh();
 
   options = {
     hostname: 'api.groupme.com',
