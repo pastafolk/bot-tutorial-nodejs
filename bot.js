@@ -1,6 +1,3 @@
-var HTTPS = require('https');
-var morty = require('cool-ascii-faces');
-
 var botID = process.env.BOT_ID;
 
 function respond() {
