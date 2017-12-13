@@ -5,13 +5,18 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Morty$/;
+      botRegex = /^\morty/; botRegexNU = /^\welcome/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
-  } else {
+  } else if(request.text && botregexNU.test(request.text)) {
+this.res.writeHead(200);
+postMessage("Please change your nickname to your Xbox Gamertag in all chat rooms!");
+this.res.end();
+}
+  else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
