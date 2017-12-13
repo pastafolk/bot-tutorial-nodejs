@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var cool = require('postMessage');
+var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
@@ -12,11 +12,12 @@ function respond() {
     postMessage("Ugh!");
     this.res.end();
   }
-    else if(request.text && botRegexRL.test(request.text)) {
+  else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("1. Keep things PG-18 2. Always be Helpful and Friendly 3. No Lying");
     this.res.end();
-  } else {
+  } 
+  else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
