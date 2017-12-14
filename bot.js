@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexMY = /^\!Morty$/; botRegexRL = /^\!Rules$/;
+      botRegexMY = /^\!morty$/; botRegexRL = /^\!rules$/;
 
   if(request.text && botRegexMY.test(request.text)) {
     this.res.writeHead(200);
@@ -14,7 +14,10 @@ function respond() {
   }
   else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("1. Keep things PG-18; 2. Always be Helpful and Friendly; 3. No Lying");
+    postMessage("- Keep things PG-18;
+                - Always be Helpful and Friendly; 
+                - No Lying;
+                - Message an Admin if you have an issue");
     this.res.end();
   } 
   else {
