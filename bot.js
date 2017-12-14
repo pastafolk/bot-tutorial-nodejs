@@ -24,10 +24,10 @@ function respond() {
   }
 }
 
-function postMessage() {
-  var botResponse, options, body, botReq;
+function postMessage(response) {
+  var botResponse,options, body, botReq;
 
-  botResponse = (response);
+  botResponse = response
 
   options = {
     hostname: 'api.groupme.com',
