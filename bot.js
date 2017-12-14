@@ -14,7 +14,7 @@ function respond() {
   }
   else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("-Keep things PG-18$ -Always be Helpful and Friendly$ -No Lying$ -Message an Admin if you have an issue$");
+    postMessage("-Keep things PG-18 /n -Always be Helpful and Friendly /n -No Lying /n -Message an Admin if you have an issue /n");
     this.res.end();
   } 
   else {
